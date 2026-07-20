@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu, Globe, Share2, MessageSquare, ExternalLink } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -20,17 +20,6 @@ export const Footer: React.FC = () => {
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
               The Annual Department of Computer Science & Engineering Technical Symposium and Department Hackathon. Innovate, Collaborate, & Transform.
             </p>
-            <div className="flex gap-3 pt-2">
-              {[Globe, Share2, MessageSquare, ExternalLink].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-9 h-9 rounded-lg bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#004ac6] transition-all"
-                >
-                  <Icon className="w-4 h-4" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Quick Links */}
