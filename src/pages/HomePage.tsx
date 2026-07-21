@@ -4,6 +4,7 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { GlassCard } from '../components/ui/GlassCard';
 import { CountdownTimer } from '../components/ui/CountdownTimer';
+import { PAPER_PRESENTATION_TOPICS, HACKATHON_PROBLEMS } from '../data/eventQuestions';
 import {
   Sparkles,
   Code2,
@@ -16,7 +17,7 @@ export const HomePage: React.FC = () => {
   const featuredEvents = [
     {
       title: 'Department 6hr Hackathon',
-      tag: '6 Problem Statements',
+      tag: `${HACKATHON_PROBLEMS.length} Problem Statements`,
       description: 'Solve real-world challenges in Hallucination Detection, Deepfakes, Academic Integrity, Phishing, Cloud Vaults, or Smart Expense Tracking.',
       icon: Code2,
       path: '/hackathon',
@@ -24,7 +25,7 @@ export const HomePage: React.FC = () => {
     },
     {
       title: 'Paper Presentation',
-      tag: '6 IEEE Topics',
+      tag: `${PAPER_PRESENTATION_TOPICS.length} IEEE Topics`,
       description: 'Present original research on AI Agents, Zero Trust Security, Serverless, Quantum Computing, RAG, and Edge AI & IoT.',
       icon: FileCheck,
       path: '/papers',
