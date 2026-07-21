@@ -152,12 +152,12 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     badgeColor: 'bg-indigo-100 text-indigo-700 border-indigo-200',
   },
   {
-    id: '6g-networks',
+    id: 'blockchain-technology',
     number: 8,
-    title: '6G Networks: Beyond 5G Connectivity',
-    category: 'Next-Gen Networking',
-    description: 'Terahertz communications, ultra-reliable low-latency links (URLLC), AI-native RAN architecture, and wireless transmission.',
-    keyAreas: ['Terahertz Band', 'AI-Native RAN', 'Ultra-Low Latency'],
+    title: 'Blockchain beyond Cyptocurrency :Building trust in digital era',
+    category: 'Blockchain & Security',
+    description: 'Decentralized ledger architectures, smart contract security, supply chain transparency, digital identity verification, and enterprise trust frameworks.',
+    keyAreas: ['Smart Contracts', 'Decentralized Identity', 'Enterprise Trust'],
     badgeColor: 'bg-teal-100 text-teal-700 border-teal-200',
   },
   {

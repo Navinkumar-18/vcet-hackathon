@@ -47,7 +47,8 @@ const getTopicIcon = (topicId: string) => {
     case 'brain-computer-interfaces':
       return Brain;
     case '6g-networks':
-      return Radio;
+    case 'blockchain-technology':
+      return Lock;
     case 'explainable-ai':
       return Eye;
     case 'post-quantum-cryptography':

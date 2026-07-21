@@ -38,18 +38,18 @@ export const HomePage: React.FC = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-12 pb-16 md:pt-16 md:pb-24 overflow-hidden">
-        {/* Background ambient lighting */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-[#004ac6]/15 to-[#712ae2]/15 blur-[120px] rounded-full -z-10 pointer-events-none" />
-
+      <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 bg-slate-50/50 border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-4">
-            Department Technical Symposium <span className="vibrant-flow-text">'26</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-blue-50 border border-blue-200 text-[#1e3a8a] text-xs font-bold mb-6">
+            <span>Intra Department Event • Velalar College of Engineering & Technology</span>
+          </div>
+
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-4">
+            Department Technical Symposium <span className="text-[#1e3a8a]">2026</span>
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto mb-8 font-medium">
-            Intra Department 6-Hour Hackathon & IEEE Paper Presentation
+          <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 font-medium">
+            Join us for the 6-Hour Intra Department Hackathon & IEEE Paper Presentation
           </p>
 
           {/* Countdown Timer */}
@@ -61,30 +61,30 @@ export const HomePage: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/register"
-              className="w-full sm:w-auto px-8 py-3.5 text-sm font-extrabold text-white vibrant-flow rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-3 text-sm font-bold text-white bg-[#1e3a8a] hover:bg-[#1d4ed8] rounded-md shadow-sm transition-all flex items-center justify-center gap-2"
             >
-              <span>Register Now</span>
+              <span>Register for Event</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
               to="/papers"
-              className="w-full sm:w-auto px-7 py-3.5 text-sm font-bold text-gray-700 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all flex items-center justify-center gap-2 shadow-xs"
+              className="w-full sm:w-auto px-7 py-3 text-sm font-semibold text-slate-700 bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-xs"
             >
               <span>Browse IEEE Topics</span>
-              <ChevronRight className="w-4 h-4 text-gray-400" />
+              <ChevronRight className="w-4 h-4 text-slate-400" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Featured Symposium Tracks */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight mb-4">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-3">
             Featured Event Tracks
           </h2>
-          <p className="text-base text-gray-600">
-            Choose your arena: compete in our 6-hour hackathon and present original research.
+          <p className="text-sm text-slate-600">
+            Choose your track: compete in our 6-hour hackathon or present original research.
           </p>
         </div>
 
@@ -92,25 +92,25 @@ export const HomePage: React.FC = () => {
           {featuredEvents.map((evt, idx) => {
             const Icon = evt.icon;
             return (
-              <GlassCard key={idx} className="flex flex-col justify-between p-8 border border-white/80">
+              <GlassCard key={idx} className="flex flex-col justify-between p-8 border border-slate-200 bg-white rounded-xl shadow-xs">
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${evt.color} text-white flex items-center justify-center shadow-md`}>
-                      <Icon className="w-7 h-7" />
+                    <div className="w-12 h-12 rounded-lg bg-slate-900 text-white flex items-center justify-center shadow-xs">
+                      <Icon className="w-6 h-6" />
                     </div>
-                    <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#712ae2]/10 text-[#712ae2]">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-md bg-blue-50 text-[#1e3a8a] border border-blue-100">
                       {evt.tag}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{evt.title}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{evt.title}</h3>
+                  <p className="text-sm text-slate-600 leading-relaxed mb-6">
                     {evt.description}
                   </p>
                 </div>
 
                 <Link
                   to={evt.path}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#004ac6] hover:text-[#712ae2] transition-colors group"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[#1e3a8a] hover:text-blue-700 transition-colors group"
                 >
                   Explore Details
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -122,22 +122,22 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="vibrant-flow rounded-3xl p-10 md:p-16 text-white text-center relative overflow-hidden shadow-2xl">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <h2 className="text-3xl md:text-5xl font-black tracking-tight">
+      <section className="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+        <div className="bg-[#0f172a] rounded-2xl p-8 md:p-12 text-white text-center relative overflow-hidden shadow-md">
+          <div className="max-w-3xl mx-auto space-y-4">
+            <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight">
               Ready to Showcase Your Innovations?
             </h2>
-            <p className="text-lg text-white/90 font-medium max-w-xl mx-auto">
-              Registration closes soon! Secure your slot for the hackathon and paper presentation.
+            <p className="text-sm md:text-base text-slate-300 font-normal max-w-xl mx-auto">
+              Secure your slot for the hackathon and paper presentation.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
               <Link
-                to="/hackathon"
-                className="px-8 py-4 bg-white text-[#004ac6] font-extrabold rounded-full hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center gap-2"
+                to="/register"
+                className="px-8 py-3.5 bg-[#2563eb] hover:bg-blue-600 text-white font-bold rounded-md transition-all shadow-xs flex items-center justify-center gap-2 text-sm"
               >
                 Register Now — Free Entry
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
