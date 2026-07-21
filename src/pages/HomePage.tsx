@@ -10,10 +10,13 @@ import {
   Code2,
   FileCheck,
   ArrowRight,
-  ChevronRight
+  ChevronRight,
+  ExternalLink
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
+  const GOOGLE_FORM_URL = 'https://forms.gle/nX6WSxo9KhGrD5sB9';
+
   const featuredEvents = [
     {
       title: 'Department 6hr Hackathon',
@@ -59,13 +62,15 @@ export const HomePage: React.FC = () => {
 
           {/* Action CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/register"
+            <a
+              href={GOOGLE_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full sm:w-auto px-8 py-3 text-sm font-bold text-white bg-[#1e3a8a] hover:bg-[#1d4ed8] rounded-md shadow-sm transition-all flex items-center justify-center gap-2"
             >
               <span>Register for Event</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <ExternalLink className="w-4 h-4" />
+            </a>
             <Link
               to="/papers"
               className="w-full sm:w-auto px-7 py-3 text-sm font-semibold text-slate-700 bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-xs"
@@ -132,13 +137,15 @@ export const HomePage: React.FC = () => {
               Secure your slot for the hackathon and paper presentation.
             </p>
             <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                to="/register"
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-3.5 bg-[#2563eb] hover:bg-blue-600 text-white font-bold rounded-md transition-all shadow-xs flex items-center justify-center gap-2 text-sm"
               >
-                Register Now — Free Entry
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <span>Register Now — Free Entry</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>

@@ -36,7 +36,16 @@ export const Footer: React.FC = () => {
             <h4 className="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Navigation</h4>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
-              <li><Link to="/register" className="hover:text-white transition-colors">Registration Form</Link></li>
+              <li>
+                <a
+                  href="https://forms.gle/nX6WSxo9KhGrD5sB9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  Registration Form
+                </a>
+              </li>
             </ul>
           </div>
         </div>

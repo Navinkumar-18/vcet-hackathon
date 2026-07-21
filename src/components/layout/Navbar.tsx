@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Cpu, Menu, X, ArrowRight, UserCheck, ShieldCheck } from 'lucide-react';
+import { Cpu, Menu, X, ExternalLink, UserCheck, ShieldCheck } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
+  const GOOGLE_FORM_URL = 'https://forms.gle/nX6WSxo9KhGrD5sB9';
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Hackathon', path: '/hackathon' },
     { name: 'Paper Presentation', path: '/papers' },
-    { name: 'Registration', path: '/register' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -99,23 +100,28 @@ export const Navbar: React.FC = () => {
                 <UserCheck className="w-4 h-4" />
               </Link>
               
-              <Link
-                to="/register"
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2 rounded-md bg-[#2563eb] hover:bg-blue-600 text-white font-bold text-xs lg:text-sm transition-all shadow-sm flex items-center gap-1.5 active:scale-95"
               >
                 <span>Register Now</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
 
             {/* Mobile Hamburger Toggle Button */}
             <div className="flex items-center gap-2 md:hidden">
-              <Link
-                to="/register"
-                className="px-3 py-1.5 rounded bg-[#2563eb] text-white font-bold text-xs"
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 rounded bg-[#2563eb] text-white font-bold text-xs flex items-center gap-1"
               >
-                Register
-              </Link>
+                <span>Register</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
 
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -144,9 +150,19 @@ export const Navbar: React.FC = () => {
                   }`}
                 >
                   <span>{link.name}</span>
-                  <ArrowRight className="w-4 h-4 opacity-50" />
                 </Link>
               ))}
+
+              <a
+                href={GOOGLE_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+                className="flex items-center justify-between px-4 py-2.5 rounded-md text-sm font-bold text-blue-400 bg-blue-950/40 border border-blue-800/50 hover:bg-blue-900/50 transition-all mt-1"
+              >
+                <span>Google Registration Form</span>
+                <ExternalLink className="w-4 h-4 opacity-80" />
+              </a>
 
               <div className="pt-3 border-t border-slate-800 mt-2">
                 <Link
