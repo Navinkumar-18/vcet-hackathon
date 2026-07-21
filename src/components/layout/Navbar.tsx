@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Cpu, Menu, X, ExternalLink, UserCheck, ShieldCheck } from 'lucide-react';
+import { Cpu, Menu, X, ExternalLink, UserCheck } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,33 +18,6 @@ export const Navbar: React.FC = () => {
 
   return (
     <header className="sticky top-0 z-50 transition-all shadow-md">
-      {/* Official College Top Header Banner */}
-      <div className="bg-white border-b border-slate-200 py-3 px-4 sm:px-8">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
-          {/* Main VCET College Logo */}
-          <Link to="/" className="flex items-center hover:opacity-95 transition-opacity">
-            <img
-              src="/vcet-logo.png"
-              alt="Velalar College of Engineering and Technology (Autonomous) - 25 Years of Academic Excellence"
-              className="h-10 sm:h-14 md:h-16 w-auto object-contain max-w-full"
-            />
-          </Link>
-
-          {/* Institution Accreditations & Info Badges */}
-          <div className="hidden md:flex items-center gap-3 text-xs font-semibold text-slate-600">
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-md bg-slate-100 border border-slate-200 text-slate-800">
-              <ShieldCheck className="w-4 h-4 text-[#1e3a8a]" />
-              <span>Autonomous Institution</span>
-            </div>
-            <div className="px-3 py-1 rounded-md bg-amber-50 border border-amber-200 text-amber-900 font-bold text-[11px]">
-              NAAC 'A+' Grade
-            </div>
-            <span className="text-slate-400">|</span>
-            <span className="text-slate-500 font-medium">Erode, Tamil Nadu</span>
-          </div>
-        </div>
-      </div>
-
       {/* Main Department Navigation Bar */}
       <div className="bg-[#0f172a] text-white border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
@@ -90,39 +63,8 @@ export const Navbar: React.FC = () => {
               })}
             </nav>
 
-            {/* Right Action Button */}
-            <div className="hidden md:flex items-center gap-3">
-              <Link
-                to="/admin"
-                className="p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                title="Admin Portal"
-              >
-                <UserCheck className="w-4 h-4" />
-              </Link>
-              
-              <a
-                href={GOOGLE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-2 rounded-md bg-[#2563eb] hover:bg-blue-600 text-white font-bold text-xs lg:text-sm transition-all shadow-sm flex items-center gap-1.5 active:scale-95"
-              >
-                <span>Register Now</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-
             {/* Mobile Hamburger Toggle Button */}
-            <div className="flex items-center gap-2 md:hidden">
-              <a
-                href={GOOGLE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 py-1.5 rounded bg-[#2563eb] text-white font-bold text-xs flex items-center gap-1"
-              >
-                <span>Register</span>
-                <ExternalLink className="w-3 h-3" />
-              </a>
-
+            <div className="flex items-center md:hidden">
               <button
                 onClick={() => setMenuOpen(!menuOpen)}
                 className="p-2 rounded bg-slate-800 text-slate-200 hover:text-white font-bold border border-slate-700 transition-all active:scale-95"
