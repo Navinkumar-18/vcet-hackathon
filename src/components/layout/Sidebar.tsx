@@ -28,16 +28,20 @@ export const Sidebar: React.FC<SidebarProps> = ({ role = 'admin' }) => {
 
   return (
     <aside className="w-64 bg-white border-r border-gray-200/80 min-h-screen flex flex-col p-4 shrink-0 shadow-sm">
-      {/* Sidebar Header */}
-      <div className="flex items-center gap-3 px-3 py-4 border-b border-gray-100 mb-6">
-        <div className="w-10 h-10 rounded-xl vibrant-flow flex items-center justify-center text-white font-bold shadow-md">
-          AD
-        </div>
+      {/* Sidebar Header with VCET Logo */}
+      <div className="px-3 py-3 border-b border-gray-100 mb-4 bg-gray-50/80 rounded-2xl flex flex-col items-center justify-center text-center gap-1.5">
+        <Link to="/" className="hover:opacity-90 transition-opacity">
+          <img
+            src="/vcet-logo.png"
+            alt="Velalar College of Engineering and Technology"
+            className="h-10 w-auto object-contain"
+          />
+        </Link>
         <div>
-          <h3 className="font-bold text-sm text-gray-900">
-            Admin Control
+          <h3 className="font-extrabold text-xs text-gray-900">
+            Admin Control Center
           </h3>
-          <span className="text-xs text-gray-500 capitalize">Admin Account</span>
+          <span className="text-[10px] text-gray-500 font-semibold">CS Department Admin</span>
         </div>
       </div>
 

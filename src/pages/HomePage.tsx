@@ -38,39 +38,40 @@ export const HomePage: React.FC = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-16 pb-24 md:pt-24 md:pb-36 overflow-hidden">
+      <section className="relative pt-12 pb-16 md:pt-16 md:pb-24 overflow-hidden">
         {/* Background ambient lighting */}
-        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#004ac6]/20 to-[#712ae2]/20 blur-[120px] rounded-full -z-10 pointer-events-none" />
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-to-tr from-[#004ac6]/15 to-[#712ae2]/15 blur-[120px] rounded-full -z-10 pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full glass-card border border-[#004ac6]/20 mb-6 sm:mb-8 ambient-glow max-w-full">
-            <Sparkles className="w-4 h-4 text-[#712ae2] animate-spin shrink-0" />
-            <span className="text-[11px] sm:text-xs md:text-sm font-bold text-gray-800 truncate">
-              Intra Department Hackathon & Paper Presentation&nbsp;'26
-            </span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-gray-900 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6">
-            Empowering the Next Generation of <span className="vibrant-flow-text">Tech Innovators</span>
+          
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-gray-900 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-4">
+            Department Technical Symposium <span className="vibrant-flow-text">'26</span>
           </h1>
 
-          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-medium">
-            Join over 500+ developers & researchers for 6 hours of intense coding and research paper presentations across 12 official topics.
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto mb-8 font-medium">
+            Intra Department 6-Hour Hackathon & IEEE Paper Presentation
           </p>
 
           {/* Countdown Timer */}
-          <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="flex justify-center mb-8">
             <CountdownTimer />
           </div>
 
-          {/* Single Register CTA */}
-          <div className="flex justify-center">
+          {/* Action CTAs */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              to="/hackathon"
-              className="w-full sm:w-auto px-8 sm:px-10 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white vibrant-flow rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-3"
+              to="/register"
+              className="w-full sm:w-auto px-8 py-3.5 text-sm font-extrabold text-white vibrant-flow rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center gap-2"
             >
-              Register for Event
-              <ArrowRight className="w-5 h-5" />
+              <span>Register Now</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+            <Link
+              to="/papers"
+              className="w-full sm:w-auto px-7 py-3.5 text-sm font-bold text-gray-700 bg-white border border-gray-200 rounded-full hover:bg-gray-50 transition-all flex items-center justify-center gap-2 shadow-xs"
+            >
+              <span>Browse IEEE Topics</span>
+              <ChevronRight className="w-4 h-4 text-gray-400" />
             </Link>
           </div>
         </div>
