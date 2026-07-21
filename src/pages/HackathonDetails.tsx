@@ -49,6 +49,11 @@ export const HackathonDetails: React.FC = () => {
         {/* Banner Hero */}
         <div className="vibrant-flow rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-white mb-10 sm:mb-16 shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl relative z-10 space-y-4">
+            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white/30 text-xs font-bold text-slate-900 shadow-md mb-2">
+              <img src="/vcet_logo.png" alt="VCET Logo" className="h-7 sm:h-8 object-contain" />
+              <div className="w-[1px] h-5 bg-slate-300" />
+              <span className="text-[#004ac6] font-extrabold">ZENTRO '26 Hackathon Track</span>
+            </div>
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
               Department Hackathon&nbsp;'26
             </h1>

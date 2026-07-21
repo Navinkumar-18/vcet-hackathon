@@ -105,9 +105,10 @@ export const PaperPresentation: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-5">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-wider text-purple-100 shadow-sm">
-                <Sparkles className="w-4 h-4 text-amber-300 animate-pulse shrink-0" />
-                <span>IEEE Symposium '26 • Research Track</span>
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white/30 text-xs font-bold text-slate-900 shadow-md">
+                <img src="/vcet_logo.png" alt="VCET Logo" className="h-7 sm:h-8 object-contain" />
+                <div className="w-[1px] h-5 bg-slate-300" />
+                <span className="text-[#1e3a8a] font-extrabold">ZENTRO '26 IEEE Symposium</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15]">

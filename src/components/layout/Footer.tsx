@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cpu } from 'lucide-react';
+import { ZentroLogo } from '../ui/ZentroLogo';
 
 export const Footer: React.FC = () => {
   return (
@@ -9,16 +9,11 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pb-8 sm:pb-12 border-b border-gray-800">
           {/* Brand Info */}
           <div className="sm:col-span-2 lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#004ac6] to-[#712ae2] flex items-center justify-center text-white shadow-md shadow-blue-500/20">
-                <Cpu className="w-5 h-5 stroke-[2.25]" />
-              </div>
-              <span className="text-xl sm:text-2xl font-black text-white tracking-tight">
-                CS-SYMPOSIUM <span className="text-[#712ae2]">'26</span>
-              </span>
+            <Link to="/">
+              <ZentroLogo variant="full" size="lg" />
             </Link>
             <p className="text-gray-400 text-xs sm:text-sm leading-relaxed max-w-sm">
-              The Annual Department of Computer Science & Engineering Technical Symposium and Department Hackathon. Innovate, Collaborate, & Transform.
+              ZENTRO '26 — The Annual Department of Computer Science & Engineering Technical Symposium and Hackathon. Innovate, Collaborate, & Transform.
             </p>
           </div>
 
@@ -52,7 +47,7 @@ export const Footer: React.FC = () => {
 
         {/* Footer Bottom */}
         <div className="pt-6 sm:pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px] sm:text-xs text-gray-500">
-          <p>© 2026 CS-SYMPOSIUM '26. All rights reserved.</p>
+          <p>© 2026 ZENTRO '26 • CSE Department. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
             <a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gray-400 transition-colors">Terms of Participation</a>

@@ -40,14 +40,26 @@ export const HomePage: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative pt-12 pb-16 md:pt-16 md:pb-20 bg-slate-50/50 border-b border-slate-200/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-blue-50 border border-blue-200 text-[#1e3a8a] text-xs font-bold mb-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+          {/* College Branding Display: VCET College Logo */}
+          <div className="mb-6 bg-white/90 backdrop-blur-md px-8 py-4 rounded-2xl border border-slate-200/80 shadow-md inline-flex items-center justify-center">
+            <img
+              src="/vcet_logo.png"
+              alt="Velalar College of Engineering & Technology Logo"
+              className="h-16 sm:h-20 object-contain max-w-[260px]"
+            />
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-md bg-blue-50 border border-blue-200 text-[#1e3a8a] text-xs font-bold mb-4">
             <span>Intra Department Event • Velalar College of Engineering & Technology</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-4">
-            Department Technical Symposium <span className="text-[#1e3a8a]">2026</span>
+            ZENTRO <span className="text-[#1e3a8a]">'26</span>
           </h1>
+          <p className="text-sm sm:text-base font-bold text-blue-900 uppercase tracking-widest mb-3">
+            Department of Computer Science & Engineering Technical Symposium
+          </p>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 font-medium">
             Join us for the 6-Hour Intra Department Hackathon & IEEE Paper Presentation

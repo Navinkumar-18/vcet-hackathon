@@ -2,14 +2,13 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   LayoutDashboard,
-  FileText,
-  Code,
   Award,
   Settings,
   LogOut,
   Bell,
   ChevronRight
 } from 'lucide-react';
+import { ZentroLogo } from '../ui/ZentroLogo';
 
 interface SidebarProps {
   role?: 'admin';
@@ -29,12 +28,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ role = 'admin' }) => {
   return (
     <aside className="w-64 bg-white border-r border-gray-200/80 min-h-screen flex flex-col p-4 shrink-0 shadow-sm">
       {/* Sidebar Header */}
-      <div className="px-3 py-3 border-b border-gray-100 mb-4 bg-gray-50/80 rounded-2xl flex flex-col items-center justify-center text-center gap-1.5">
+      <div className="px-3 py-3 border-b border-gray-100 mb-4 bg-slate-900 rounded-2xl flex flex-col items-center justify-center text-center gap-2">
+        <div className="flex items-center gap-2 bg-white/95 px-3 py-1.5 rounded-xl shadow-xs">
+          <img src="/vcet_logo.png" alt="VCET College Logo" className="h-7 object-contain" />
+        </div>
         <div>
-          <h3 className="font-extrabold text-xs text-gray-900">
-            Admin Control Center
+          <h3 className="font-extrabold text-xs text-white tracking-wide">
+            ZENTRO Admin Center
           </h3>
-          <span className="text-[10px] text-gray-500 font-semibold">CS Department Admin</span>
+          <span className="text-[9px] text-slate-400 font-semibold block">Velalar College of Engineering & Tech</span>
         </div>
       </div>
 

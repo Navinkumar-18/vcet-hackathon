@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Cpu, Menu, X, ExternalLink, UserCheck } from 'lucide-react';
+import { Menu, X, ExternalLink, UserCheck } from 'lucide-react';
+import { ZentroLogo } from '../ui/ZentroLogo';
 
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,24 +24,9 @@ export const Navbar: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-8">
           <div className="flex items-center justify-between h-14 sm:h-16">
             
-            {/* Department Title */}
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-8 h-8 rounded-lg bg-[#1e3a8a] flex items-center justify-center text-white shadow-sm shrink-0">
-                <Cpu className="w-4 h-4 stroke-[2.25]" />
-              </div>
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm sm:text-base font-bold tracking-wide text-white group-hover:text-blue-300 transition-colors">
-                    CS-SYMPOSIUM
-                  </span>
-                  <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-blue-500/20 text-blue-300 border border-blue-400/30">
-                    2026
-                  </span>
-                </div>
-                <span className="text-[10px] text-slate-400 font-medium hidden sm:block">
-                  Dept. of Computer Science & Engineering
-                </span>
-              </div>
+            {/* Department & Symposium Logo */}
+            <Link to="/">
+              <ZentroLogo variant="full" size="md" />
             </Link>
 
             {/* Desktop Navigation Links */}
