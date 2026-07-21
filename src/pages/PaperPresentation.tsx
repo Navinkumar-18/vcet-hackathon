@@ -87,12 +87,11 @@ export const PaperPresentation: React.FC = () => {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-[#f7f9fb] flex flex-col relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#f7f9fb] flex flex-col relative">
       <Navbar />
 
-      {/* Subtle background ambient lights for Desktop */}
-      <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[800px] h-[450px] bg-gradient-to-tr from-[#004ac6]/15 via-[#712ae2]/15 to-purple-400/10 blur-[130px] rounded-full -z-10 pointer-events-none" />
-      <div className="absolute top-[800px] right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[140px] rounded-full -z-10 pointer-events-none" />
+      {/* GPU Accelerated ambient light matching HomePage */}
+      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-[#004ac6]/15 to-[#712ae2]/15 blur-[120px] rounded-full -z-10 pointer-events-none transform-gpu" />
 
       <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 w-full space-y-12 sm:space-y-16">
         
@@ -164,7 +163,7 @@ export const PaperPresentation: React.FC = () => {
 
             {/* Right Desktop Control / Summary Glass Card */}
             <div className="lg:col-span-5">
-              <div className="bg-white/10 backdrop-blur-xl border border-white/25 rounded-3xl p-6 sm:p-8 text-white shadow-2xl space-y-6">
+              <div className="bg-white/15 backdrop-blur-md border border-white/25 rounded-3xl p-6 sm:p-8 text-white shadow-2xl space-y-6 transform-gpu">
                 <div className="flex items-center justify-between border-b border-white/15 pb-4">
                   <h3 className="font-extrabold text-lg sm:text-xl flex items-center gap-2">
                     <Award className="w-5 h-5 text-amber-300" />
@@ -342,7 +341,7 @@ export const PaperPresentation: React.FC = () => {
                 return (
                   <GlassCard
                     key={topic.id}
-                    className="p-6 border border-white/80 flex flex-col justify-between hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group bg-white/80 backdrop-blur-md relative overflow-hidden"
+                    className="p-6 border border-white/80 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-transform duration-200 group bg-white/95 relative overflow-hidden transform-gpu"
                   >
                     {/* Top gradient accent line on hover */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#712ae2] to-[#004ac6] opacity-0 group-hover:opacity-100 transition-opacity" />
