@@ -187,7 +187,7 @@ export const PaperPresentation: React.FC = () => {
                     <CheckCircle2 className="w-5 h-5 text-emerald-300 shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold text-white block">Presentation Format</span>
-                      <span className="text-white/80">8-10 minutes presentation + 2 minutes Q&A by judging panel.</span>
+                      <span className="text-white/80">5 minutes presentation + 2 minutes Q&A by judging panel.</span>
                     </div>
                   </div>
 
@@ -195,7 +195,7 @@ export const PaperPresentation: React.FC = () => {
                     <CheckCircle2 className="w-5 h-5 text-emerald-300 shrink-0 mt-0.5" />
                     <div>
                       <span className="font-bold text-white block">Certification & Recognition</span>
-                      <span className="text-white/80">Certificates awarded to all presenters. Top papers receive special IEEE honors.</span>
+                      <span className="text-white/80">Certificates awarded to all presenters.</span>
                     </div>
                   </div>
                 </div>
