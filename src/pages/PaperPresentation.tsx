@@ -338,7 +338,6 @@ export const PaperPresentation: React.FC = () => {
           {filteredTopics.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredTopics.map((topic: PaperTopic) => {
-                const IconComponent = getTopicIcon(topic.id);
                 return (
                   <GlassCard
                     key={topic.id}
@@ -348,15 +347,11 @@ export const PaperPresentation: React.FC = () => {
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#712ae2] to-[#004ac6] opacity-0 group-hover:opacity-100 transition-opacity" />
 
                     <div className="space-y-4">
-                      {/* Top Bar: Icon, Number Badge, Category */}
+                      {/* Top Bar: Number Badge, Category */}
                       <div className="flex items-center justify-between gap-3">
-                        <div className="w-11 h-11 rounded-2xl bg-[#712ae2]/10 text-[#712ae2] flex items-center justify-center font-black group-hover:bg-[#712ae2] group-hover:text-white transition-all shrink-0 shadow-sm">
-                          <IconComponent className="w-5 h-5" />
-                        </div>
-
                         <div className="flex items-center gap-2">
                           <span className="text-xs font-black px-2.5 py-1 rounded-lg bg-gray-100 text-gray-700 font-mono border border-gray-200">
-                            #{topic.number.toString().padStart(2, '0')}
+                            {topic.number.toString().padStart(2, '0')}
                           </span>
                           <span className={`text-[10px] font-bold px-2.5 py-1 rounded-full border ${topic.badgeColor}`}>
                             {topic.category}

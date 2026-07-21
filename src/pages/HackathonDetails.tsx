@@ -130,7 +130,7 @@ export const HackathonDetails: React.FC = () => {
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-4">
                       <span className="w-8 h-8 rounded-xl bg-[#004ac6]/10 text-[#004ac6] flex items-center justify-center font-black text-sm">
-                        #{prob.number}
+                        {prob.number}
                       </span>
                       <span className={`text-[11px] font-bold px-3 py-1 rounded-full border ${prob.badgeColor}`}>
                         {prob.category}
