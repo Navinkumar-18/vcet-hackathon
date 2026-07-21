@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ExternalLink, UserCheck } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { ZentroLogo } from '../ui/ZentroLogo';
 
 export const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
-
-  const GOOGLE_FORM_URL = 'https://forms.gle/nX6WSxo9KhGrD5sB9';
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -80,28 +78,6 @@ export const Navbar: React.FC = () => {
                   <span>{link.name}</span>
                 </Link>
               ))}
-
-              <a
-                href={GOOGLE_FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setMenuOpen(false)}
-                className="flex items-center justify-between px-4 py-2.5 rounded-md text-sm font-bold text-blue-400 bg-blue-950/40 border border-blue-800/50 hover:bg-blue-900/50 transition-all mt-1"
-              >
-                <span>Google Registration Form</span>
-                <ExternalLink className="w-4 h-4 opacity-80" />
-              </a>
-
-              <div className="pt-3 border-t border-slate-800 mt-2">
-                <Link
-                  to="/admin"
-                  onClick={() => setMenuOpen(false)}
-                  className="flex items-center justify-center gap-2 px-4 py-2 rounded-md border border-slate-700 text-slate-300 font-semibold text-xs hover:bg-slate-800"
-                >
-                  <UserCheck className="w-4 h-4" />
-                  <span>Admin Dashboard</span>
-                </Link>
-              </div>
             </div>
           </div>
         )}
