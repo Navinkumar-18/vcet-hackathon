@@ -13,7 +13,8 @@ export interface PaperTopic {
   number: number;
   title: string;
   category: string;
-  description?: string;
+  description: string;
+  keyAreas: string[];
   badgeColor: string;
 }
 
@@ -92,6 +93,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 1,
     title: 'AI Agents: The Next Digital Workforce',
     category: 'AI & Autonomous Systems',
+    description: 'Design and analysis of autonomous multi-agent architectures, reasoning loops, task planning, and collaboration frameworks in enterprise environments.',
+    keyAreas: ['Multi-Agent Systems', 'LLM Automation', 'Autonomous Decision'],
     badgeColor: 'bg-purple-100 text-purple-700 border-purple-200',
   },
   {
@@ -99,6 +102,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 2,
     title: 'Zero Trust Security: The Future of Cyber Defense',
     category: 'Cybersecurity & Networks',
+    description: 'Identity-first security protocols, micro-segmentation, continuous authentication, and threat mitigation in cloud and hybrid enterprise infrastructure.',
+    keyAreas: ['Micro-segmentation', 'IAM & Authentication', 'Threat Mitigation'],
     badgeColor: 'bg-red-100 text-red-700 border-red-200',
   },
   {
@@ -106,6 +111,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 3,
     title: 'Serverless Computing: Building the Future of Cloud Applications',
     category: 'Cloud Computing',
+    description: 'Event-driven architectures, cold-start optimization, state management, cost models, and scalable FaaS paradigms.',
+    keyAreas: ['Event-Driven FaaS', 'Cold-Start Optimization', 'Cloud Scalability'],
     badgeColor: 'bg-blue-100 text-blue-700 border-blue-200',
   },
   {
@@ -113,6 +120,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 4,
     title: 'Quantum Computing: Revolutionizing the Future of Computation',
     category: 'Quantum Computing',
+    description: 'Quantum algorithms, NISQ-era optimization, quantum error correction, and applications in cryptography and machine learning.',
+    keyAreas: ['Quantum Algorithms', 'Qubit Optimization', 'Quantum ML'],
     badgeColor: 'bg-emerald-100 text-emerald-700 border-emerald-200',
   },
   {
@@ -120,6 +129,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 5,
     title: 'Retrieval-Augmented Generation (RAG): Enhancing AI with Reliable Knowledge',
     category: 'Generative AI',
+    description: 'Hybrid vector search, dense retrieval, reranking mechanisms, hallucination reduction, and domain-specific knowledge integration.',
+    keyAreas: ['Vector Databases', 'Semantic Search', 'Hallucination Reduction'],
     badgeColor: 'bg-amber-100 text-amber-700 border-amber-200',
   },
   {
@@ -127,6 +138,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 6,
     title: 'Edge AI and Intelligent IoT: Bringing AI Closer to Devices',
     category: 'Edge AI & IoT',
+    description: 'On-device model quantization, low-latency inferencing on microcontrollers, edge-cloud synchronization, and smart sensor networks.',
+    keyAreas: ['Model Quantization', 'Low-Latency Edge', 'Smart Sensor Networks'],
     badgeColor: 'bg-cyan-100 text-cyan-700 border-cyan-200',
   },
   {
@@ -134,6 +147,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 7,
     title: 'Brain-Computer Interfaces: Bridging Mind and Machine',
     category: 'Neurotech & HCI',
+    description: 'Non-invasive EEG signal processing, neural decoding algorithms, real-time biofeedback control, and adaptive human-computer interaction.',
+    keyAreas: ['Neural Decoding', 'EEG Processing', 'Adaptive HCI'],
     badgeColor: 'bg-indigo-100 text-indigo-700 border-indigo-200',
   },
   {
@@ -141,6 +156,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 8,
     title: '6G Networks: Beyond 5G Connectivity',
     category: 'Next-Gen Networking',
+    description: 'Terahertz communications, ultra-reliable low-latency links (URLLC), AI-native RAN architecture, and wireless transmission.',
+    keyAreas: ['Terahertz Band', 'AI-Native RAN', 'Ultra-Low Latency'],
     badgeColor: 'bg-teal-100 text-teal-700 border-teal-200',
   },
   {
@@ -148,6 +165,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 9,
     title: 'Explainable AI (XAI): Making Black-Box Models Transparent',
     category: 'AI Ethics',
+    description: 'Feature attribution, counterfactual explanations, model auditability, and trust frameworks in critical AI decision-making domains.',
+    keyAreas: ['SHAP & LIME', 'Model Auditability', 'Algorithmic Fairness'],
     badgeColor: 'bg-pink-100 text-pink-700 border-pink-200',
   },
   {
@@ -155,6 +174,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 10,
     title: 'Post-Quantum Cryptography: Securing Data for the Quantum Age',
     category: 'Cryptography',
+    description: 'Lattice-based encryption, hash-based signatures, NIST PQC standardization, and quantum-resistant secure communication protocols.',
+    keyAreas: ['Lattice Cryptography', 'NIST Standardization', 'Quantum Resilience'],
     badgeColor: 'bg-rose-100 text-rose-700 border-rose-200',
   },
   {
@@ -162,6 +183,8 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 11,
     title: 'Federated Learning: Privacy-Preserving Machine Learnings',
     category: 'Distributed AI',
+    description: 'Decentralized model training, differential privacy guarantees, secure aggregation algorithms, and cross-silo data collaboration.',
+    keyAreas: ['Differential Privacy', 'Secure Aggregation', 'Decentralized Training'],
     badgeColor: 'bg-violet-100 text-violet-700 border-violet-200',
   },
   {
@@ -169,6 +192,9 @@ export const PAPER_PRESENTATION_TOPICS: PaperTopic[] = [
     number: 12,
     title: 'Green Computing: Building Sustainable Technology',
     category: 'Sustainable Tech',
+    description: 'Energy-efficient AI model training, carbon-aware compute scheduling, hardware lifecycle management, and sustainable data centers.',
+    keyAreas: ['Carbon-Aware Compute', 'Energy Efficiency', 'Sustainable Hardware'],
     badgeColor: 'bg-emerald-100 text-emerald-700 border-emerald-200',
   },
 ];
+

@@ -8,7 +8,23 @@ interface TimeLeft {
 }
 
 export const CountdownTimer: React.FC = () => {
-  const targetDate = new Date('2026-07-24T09:00:00');
+  const getNextFridayMorning = () => {
+    const target = new Date('2026-07-24T09:30:00');
+    // Ensure if target has passed, compute next Friday 9:30 AM dynamically
+    if (target.getTime() <= Date.now()) {
+      const now = new Date();
+      const dayOfWeek = now.getDay();
+      let daysUntilFriday = (5 - dayOfWeek + 7) % 7;
+      if (daysUntilFriday === 0 && (now.getHours() > 9 || (now.getHours() === 9 && now.getMinutes() >= 30))) {
+        daysUntilFriday = 7;
+      }
+      target.setDate(now.getDate() + daysUntilFriday);
+      target.setHours(9, 30, 0, 0);
+    }
+    return target;
+  };
+
+  const targetDate = getNextFridayMorning();
 
   const calculateTimeLeft = (): TimeLeft => {
     const difference = +targetDate - +new Date();
