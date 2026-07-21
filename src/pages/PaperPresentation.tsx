@@ -108,18 +108,18 @@ export const PaperPresentation: React.FC = () => {
               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/90 backdrop-blur-md border border-white/30 text-xs font-bold text-slate-900 shadow-md">
                 <img src="/vcet_logo.png" alt="VCET Logo" className="h-7 sm:h-8 object-contain" />
                 <div className="w-[1px] h-5 bg-slate-300" />
-                <span className="text-[#1e3a8a] font-extrabold">ZENTRO '26 IEEE Symposium</span>
+                <span className="text-[#1e3a8a] font-extrabold">ZENTRO '26 Symposium</span>
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15]">
-                IEEE Paper <br className="hidden sm:inline" />
+                Paper Presentation <br className="hidden sm:inline" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-100 to-indigo-200">
-                  Presentation '26
+                  Topics '26
                 </span>
               </h1>
 
               <p className="text-sm sm:text-base md:text-lg text-white/95 font-medium leading-relaxed max-w-2xl">
-                Present original research across 12 emerging technology tracks for peer review by distinguished IEEE academic chairs and industry researchers.
+                Present original research across 12 emerging technology tracks for peer review by distinguished academic chairs and industry researchers.
               </p>
 
               {/* Quick specs pills */}
@@ -172,7 +172,7 @@ export const PaperPresentation: React.FC = () => {
                     Presentation Guidelines
                   </h3>
                   <span className="text-[11px] font-bold uppercase tracking-wider bg-emerald-400/20 text-emerald-200 border border-emerald-300/30 px-2.5 py-1 rounded-full">
-                    Official IEEE Format
+                    Official Format
                   </span>
                 </div>
 
@@ -220,7 +220,7 @@ export const PaperPresentation: React.FC = () => {
               </div>
               <h4 className="font-bold text-gray-900 text-base">Team Structure</h4>
               <p className="text-xs text-gray-600 leading-relaxed">
-                Teams of 2 members or solo authors. Both co-authors receive official IEEE participation certificates.
+                Teams of 2 members or solo authors. Both co-authors receive official participation certificates.
               </p>
             </div>
           </GlassCard>
@@ -254,7 +254,7 @@ export const PaperPresentation: React.FC = () => {
               <div className="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">
                 <Award className="w-6 h-6" />
               </div>
-              <h4 className="font-bold text-gray-900 text-base">IEEE Recognition</h4>
+              <h4 className="font-bold text-gray-900 text-base">Paper Presentation Recognition</h4>
               <p className="text-xs text-gray-600 leading-relaxed">
                 Cash prizes for top presenters, expert feedback from chairs, and potential research publishing support.
               </p>
@@ -275,7 +275,7 @@ export const PaperPresentation: React.FC = () => {
                 Official Paper Presentation Topics
               </h2>
               <p className="text-xs sm:text-sm text-gray-600 mt-1 max-w-2xl">
-                Explore the 12 official IEEE technology domains. Select a research topic to view its focus areas and register your submission.
+                Explore the 12 official technology domains. Select a research topic to view its focus areas and register your submission.
               </p>
             </div>
 
@@ -320,7 +320,7 @@ export const PaperPresentation: React.FC = () => {
           {/* Search Result Count */}
           <div className="flex items-center justify-between text-xs font-semibold text-gray-500 px-1">
             <span>
-              Showing <span className="text-gray-900 font-bold">{filteredTopics.length}</span> of {PAPER_PRESENTATION_TOPICS.length} IEEE Tracks
+              Showing <span className="text-gray-900 font-bold">{filteredTopics.length}</span> of {PAPER_PRESENTATION_TOPICS.length} Presentation Tracks
             </span>
             {(selectedCategory !== 'All' || searchQuery) && (
               <button
@@ -395,7 +395,7 @@ export const PaperPresentation: React.FC = () => {
           <div className="max-w-3xl mx-auto space-y-6 text-center relative z-10">
             <span className="text-xs font-bold uppercase tracking-widest bg-white/20 px-4 py-1.5 rounded-full inline-flex items-center gap-2 border border-white/20">
               <Sparkles className="w-4 h-4 text-amber-300 shrink-0" />
-              Official IEEE Paper Registration
+              Official Paper Registration
             </span>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-tight">
@@ -403,7 +403,7 @@ export const PaperPresentation: React.FC = () => {
             </h2>
 
             <p className="text-sm sm:text-base text-white/95 leading-relaxed font-medium max-w-xl mx-auto">
-              Submit your paper details and register your team via the official IEEE Google Registration Form.
+              Submit your paper details and register your team via the official Google Registration Form.
             </p>
 
             <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">

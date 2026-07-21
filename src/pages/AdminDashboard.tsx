@@ -69,7 +69,7 @@ export const AdminDashboard: React.FC = () => {
             { label: 'Total Registrations', val: '528', icon: Users, change: '+14% vs last week' },
             { label: 'Revenue Collected', val: '$21,450', icon: DollarSign, change: '+22% vs target' },
             { label: 'Active Events', val: '18 Events', icon: Calendar, change: '100% capacity' },
-            { label: 'Approved Papers', val: '64 Papers', icon: CheckCircle, change: 'IEEE Verified' },
+            { label: 'Approved Papers', val: '64 Papers', icon: CheckCircle, change: 'Verified' },
           ].map((card, i) => {
             const Icon = card.icon;
             return (

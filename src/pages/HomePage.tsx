@@ -26,7 +26,7 @@ export const HomePage: React.FC = () => {
     },
     {
       title: 'Paper Presentation',
-      tag: `${PAPER_PRESENTATION_TOPICS.length} IEEE Topics`,
+      tag: `${PAPER_PRESENTATION_TOPICS.length} Paper Presentation Topics`,
       description: 'Present original research on AI Agents, Zero Trust Security, Serverless, Quantum Computing, RAG, and Edge AI & IoT.',
       icon: FileCheck,
       path: '/papers',
@@ -62,23 +62,12 @@ export const HomePage: React.FC = () => {
           </p>
 
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-8 font-medium">
-            Join us for the 6-Hour Intra Department Hackathon & IEEE Paper Presentation
+            Join us for the 6-Hour Intra Department Hackathon & Paper Presentation
           </p>
 
           {/* Countdown Timer */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center">
             <CountdownTimer />
-          </div>
-
-          {/* Action CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/papers"
-              className="w-full sm:w-auto px-7 py-3 text-sm font-semibold text-slate-700 bg-white border border-slate-300 rounded-md hover:bg-slate-50 transition-all flex items-center justify-center gap-2 shadow-xs"
-            >
-              <span>Browse IEEE Topics</span>
-              <ChevronRight className="w-4 h-4 text-slate-400" />
-            </Link>
           </div>
         </div>
       </section>
