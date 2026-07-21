@@ -83,7 +83,7 @@ export const HomePage: React.FC = () => {
             Featured Event Tracks
           </h2>
           <p className="text-base text-gray-600">
-            Choose your arena: compete in our 6-hour hackathon or present original research.
+            Choose your arena: compete in our 6-hour hackathon and present original research.
           </p>
         </div>
 

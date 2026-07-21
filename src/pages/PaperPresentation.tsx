@@ -3,7 +3,7 @@ import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
 import { GlassCard } from '../components/ui/GlassCard';
 import { PAPER_PRESENTATION_TOPICS, PaperTopic } from '../data/eventQuestions';
-import { Sparkles, ExternalLink } from 'lucide-react';
+import { Sparkles, ExternalLink, Users, Layers, ShieldAlert, BookOpen } from 'lucide-react';
 
 export const PaperPresentation: React.FC = () => {
   const PAPER_FORM_URL = 'https://forms.gle/p1Ws2rRoqbyH2yf77';
@@ -13,19 +13,48 @@ export const PaperPresentation: React.FC = () => {
       <Navbar />
 
       <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-12 w-full">
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <span className="text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#712ae2]">Research & Academic Track</span>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mt-1 mb-3 sm:mb-4">
-            Paper Presentation
-          </h1>
-          <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed">
-            Explore original technical research paper presentation topics across 12 emerging technology tracks for peer review by distinguished IEEE academic chairs.
-          </p>
+        {/* Banner Hero */}
+        <div className="vibrant-flow rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-14 text-white mb-10 sm:mb-16 shadow-2xl relative overflow-hidden">
+          <div className="max-w-3xl relative z-10 space-y-4">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+              IEEE Paper Presentation&nbsp;'26
+            </h1>
+            <p className="text-sm sm:text-base md:text-lg text-white/90 font-medium leading-relaxed">
+              Present original research across 12 emerging technology tracks for peer review by distinguished IEEE academic chairs.
+            </p>
+
+            <div className="pt-2 sm:pt-4 flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm font-bold">
+              <div className="flex items-center gap-2">
+                <Users className="w-4 h-4 sm:w-5 sm:h-5 text-purple-200" />
+                <span>Team Size: 2 Members</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Layers className="w-4 h-4 sm:w-5 sm:h-5 text-blue-200" />
+                <span>Max 10 to 12 Slides</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ShieldAlert className="w-4 h-4 sm:w-5 sm:h-5 text-pink-200" />
+                <span>AI Tools Not Allowed</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-200" />
+                <span>12 IEEE Topics</span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* TOPICS VIEW */}
         <div className="mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-10">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#712ae2]">Research Tracks</span>
+            <h2 className="text-3xl sm:text-4xl font-black text-gray-900 tracking-tight mt-1 mb-3">
+              Official Paper Presentation Topics
+            </h2>
+            <p className="text-sm text-gray-600">
+              Select one of the official IEEE research tracks below to present your original paper.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {PAPER_PRESENTATION_TOPICS.map((topic: PaperTopic) => (
               <GlassCard
